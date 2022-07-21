@@ -1,0 +1,35 @@
+{
+  "name": "picture-hot-zone",
+  "version": "0.0.1",
+  "description": "图片热区生成",
+  "keywords": [
+    "图片热区",
+    "低代码",
+    "antd",
+    "react"
+  ],
+  "author": "“田迪生” <disheng.tds@digitalexpo.com>",
+  "homepage": "https://tiandisheng.top/",
+  "license": "Apache-2.0",
+  "main": "lib/PictureHotZone.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "registry": "https://registry-cnpm.dayu.work/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tianxintiandisheng/tds-components.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/tianxintiandisheng/tds-components/issues"
+  }
+}
