@@ -29,5 +29,8 @@
   "bugs": {
     "url": "https://github.com/tianxintiandisheng/tds-components/issues"
   },
-  "gitHead": "4c74d0ba9122bd0c47c6227f0a11b82f56f6bb80"
+  "gitHead": "4c74d0ba9122bd0c47c6227f0a11b82f56f6bb80",
+  "dependencies": {
+    "antd": "^4.22.1"
+  }
 }
