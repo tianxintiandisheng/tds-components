@@ -6,6 +6,8 @@
 **/dist
 **/*.package-lock.json
 **/*.yarn.lock
+**/lib
+**/es
 
 # dependencies
 /node_modules

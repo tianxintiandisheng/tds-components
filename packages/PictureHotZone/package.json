@@ -17,7 +17,9 @@
     "test": "__tests__"
   },
   "files": [
-    "lib"
+    "dist",
+    "lib",
+    "es"
   ],
   "repository": {
     "type": "git",
