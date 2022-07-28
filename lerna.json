@@ -2,7 +2,7 @@
   "packages": ["packages/*"],
   "version": "independent",
   "changelogPreset": {
-    "name": "conventionalcommits",
+    "name": "angular",
     "types": [
       {
         "type": "feat",
