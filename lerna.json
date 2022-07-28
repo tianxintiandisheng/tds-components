@@ -51,11 +51,6 @@
         "type": "ci",
         "section": "👷 Continuous Integration | CI 配置"
       }
-    ],
-    "issuePrefixes": ["#"],
-    "issueUrlFormat": "{{host}}/digital-expo-backstage-lowcode/multiport-builder-launcher/issues/{{id}}",
-    "commitUrlFormat": "{{host}}/digital-expo-backstage-lowcode/multiport-builder-launcher/commit/{{hash}}",
-    "compareUrlFormat": "{{host}}/digital-expo-backstage-lowcode/multiport-builder-launcher/compare/{{previousTag}}...{{currentTag}}",
-    "userUrlFormat": "{{host}}/{{user}}"
+    ]
   }
 }
