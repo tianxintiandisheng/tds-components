@@ -24,3 +24,9 @@
 # ide
 /.vscode
 /.idea
+
+# lerna
+**/node_modules
+**/dist
+**/lib
+**/es
