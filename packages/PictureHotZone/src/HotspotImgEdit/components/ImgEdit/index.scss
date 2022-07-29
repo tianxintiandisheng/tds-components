@@ -1,0 +1,27 @@
+.root {
+  position: relative;
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 54vh;
+  .cover{
+    position:absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: green;
+    opacity: 0.4;
+  }
+  .image{
+    width: 100%;
+  }
+  .boxItem{
+    z-index: 2;
+    border: 1px solid  blue;
+  }
+  .boxEdit{
+    color: red;
+    border: 1px solid  blue;
+  }
+
+}
