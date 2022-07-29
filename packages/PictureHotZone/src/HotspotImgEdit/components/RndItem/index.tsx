@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Rnd } from 'react-rnd';
 import { __BoxItem } from '../../interface';
-import ss from './index.scss';
+import ss from './index.less';
 
 /**
  * @function 将含有px的字符串转为数字

@@ -1,8 +1,8 @@
 import React from 'react';
-import RelatedSimple from '@/components/RelatedSimple';
+// import RelatedSimple from '@/components/RelatedSimple';
 import { Popconfirm } from 'antd';
 import { __BoxItem } from '../../interface';
-import ss from './index.scss';
+import ss from './index.less';
 
 interface __HotspotListProps {
   /**
@@ -63,12 +63,12 @@ function HotspotList(props: __HotspotListProps) {
           >
             <div className={ss.itemContentLeft}>
               <div>{`【${item.orderNum}】`}</div>
-              <RelatedSimple
+              {/* <RelatedSimple
                 value={item.link}
                 onChange={(dataItem: any) => updateBoxArray('update', item.uuid, dataItem)}
                 typeComp={typeComp}
                 otherPorps={otherPorps}
-              />
+              /> */}
             </div>
             <Popconfirm
               title="确认删除热区包括跳转链接吗?"

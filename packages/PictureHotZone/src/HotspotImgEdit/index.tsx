@@ -1,21 +1,14 @@
-import React, { useState } from 'react';
-import useDeepCompareEffect from 'use-deep-compare-effect';
-import { Form, Modal, Popover } from 'antd';
+import React, { useState, useEffect } from 'react';
+// import useDeepCompareEffect from 'use-deep-compare-effect';
+import { Modal, Popover } from 'antd';
 import { QuestionCircleOutlined } from '@ant-design/icons';
-import classname from 'classnames';
-import Icon from '@/components/IconItem';
+// import Icon from '@/components/IconItem';
 import { __BoxItem } from './interface';
 import ImgEdit from './components/ImgEdit';
 import HotspotList from './components/HotspotList';
-import ss from './index.scss';
+import ss from './index.less';
 
 interface __Props {
-  /**
-   * label
-   * @description       label
-   * @default           支持定义默认值
-   */
-  label: string;
   /**
    * value
    * @description       图片地址
@@ -41,11 +34,6 @@ interface __Props {
    */
   otherPorps: any;
   /**
-   * @description      图片格式说明
-   * @default           支持定义默认值
-   */
-  tip: number;
-  /**
    * @description      不知道干嘛用的
    * @default           0
    */
@@ -58,45 +46,44 @@ function HotspotImgEdit(props: __Props) {
   const [boxArray, setBoxArray] = useState<__BoxItem[]>([]);
   const [isModalVisible, setIsModalVisible] = useState<boolean>(false);
   const [curSelectItemUuid, setCurSelectItemUuid] = useState<number>(0); // 当前选中热区的uuid
-  const [form] = Form.useForm();
 
-  const { label, value = '', extraValue = [], onChange, otherPorps, tip, typeComp } = props;
-  const { FileUpload } = otherPorps.ModalComponents || {};
+  const {
+    value = 'http://www.febeacon.com/lerna-docs-zh-cn/images/logo.png',
+    extraValue = [],
+    onChange,
+    otherPorps,
+    typeComp,
+  } = props;
   const showModal = () => {
     setCurSelectItemUuid(0); // 重置当前选中
     setIsModalVisible(true);
   };
 
   const handleOk = () => {
-    onChange(value, {
-      dataSource: deepClone(boxArray),
-    });
+    if (onChange) {
+      onChange(value, {
+        dataSource: deepClone(boxArray),
+      });
+    }
+
     setIsModalVisible(false);
   };
 
   const handleCancel = () => {
     setBoxArrayDeepClone([...extraValue]);
-
     setIsModalVisible(false);
   };
 
-  useDeepCompareEffect(() => {
-    form.setFieldsValue({ imageSrc: value });
-    setBoxArrayDeepClone([...extraValue]);
-    setTimeout(() => {
-      form.validateFields();
-    }, 100);
-  }, [value, extraValue]);
-  // 表单变化
-  function onValuesChange(current = {}) {
-    onChange(current.imageSrc);
-  }
+  // useEffect(() => {
+  //   setBoxArrayDeepClone([...extraValue]);
+  // }, [value, extraValue]);
 
   const setBoxArrayDeepClone = (item: __BoxItem[]) => {
     setBoxArray(deepClone(item));
   };
 
   const renderPreviewHotspot = (list: __BoxItem[]) => {
+    console.log('renderPreviewHotspot', list);
     if (list.length > 0) {
       return list.map((i: __BoxItem) => {
         return (
@@ -137,48 +124,16 @@ function HotspotImgEdit(props: __Props) {
   };
   return (
     <div className={ss.root}>
-      <div className={ss.tipArea}>
-        <div className={ss.title}>{label}</div>
-        <div className={ss.tip}>{tip}</div>
-      </div>
-      <Form className={ss.form} form={form} onValuesChange={onValuesChange}>
-        <Form.Item
-          name="imageSrc"
-          label=""
-          className={ss.upload}
-          rules={[{ required: true, message: '请上传图片' }]}
-        >
-          {/* <AvatorUpload
-            data={{ path: "AD" }}
-            accept=".png,.jpg,.jpeg,.gif"
-            imageSize={5}
-            {...otherPorps}
-          /> */}
-          <FileUpload
-            accept=".png,.jpg,.jpeg,.gif"
-            imgSize={5}
-            fileType="image"
-            selectionMode="single"
-          />
-        </Form.Item>
-      </Form>
-      <div className={classname(ss.preBox, { [ss.hidden]: value === '' })}>
+      <div className={ss.preBox}>
         <div className={ss.titlePre}>
           <div className={ss.titleLeft}>
-            <span style={{ color: '#262626' }}>热区示意</span>
+            <span style={{ color: '#262626' }}>热区编辑</span>
             <Popover placement="bottom" content={renderDes()}>
               <QuestionCircleOutlined style={{ margin: '0 2px', color: '#B4B4B4' }} />
             </Popover>
             <span>:</span>
           </div>
           <div className={ss.titleRight} onClick={showModal}>
-            <Icon
-              type="icon-bianji"
-              color="#2f54eb"
-              width={14}
-              height={14}
-              className="iconbianji"
-            />
             <span>编辑</span>
           </div>
         </div>
@@ -187,7 +142,6 @@ function HotspotImgEdit(props: __Props) {
           {renderPreviewHotspot(extraValue)}
         </div>
       </div>
-
       <Modal
         title="全屏编辑"
         width="80vw"

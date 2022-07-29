@@ -1,0 +1,22 @@
+.root {
+  .orderNum {
+    width: 20px;
+    height: 20px;
+    color: #fff;
+    line-height: 20px;
+    text-align: center;
+    background-color: rgb(248, 84, 29);
+  }
+  .orderNumCur {
+    @extend .orderNum;
+    background-color: rgb(250, 170, 0);
+  }
+  :global {
+    .rndElement {
+      background-color: rgba(248, 84, 29, 0.7);
+    }
+    .rndElementCur {
+      background-color: rgba(250, 170, 0, 0.7);
+    }
+  }
+}

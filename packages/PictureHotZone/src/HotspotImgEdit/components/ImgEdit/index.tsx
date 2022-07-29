@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { __BoxItem } from '../../interface';
 import RndItem from '../RndItem';
-import ss from './index.scss';
+import ss from './index.less';
 
 interface __ImgEditProps {
   /**
