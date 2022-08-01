@@ -1,4 +1,8 @@
 .root {
+  .title {
+    color: #262626;
+    font-size: 14px;
+  }
   .tipArea {
     padding: 0 16px;
     .title::before {
@@ -7,10 +11,6 @@
       font-size: 12px;
       font-family: SimSun, sans-serif;
       content: '*';
-    }
-    .title {
-      color: #262626;
-      font-size: 14px;
     }
     .tip {
       color: #bfbfbf;
@@ -62,7 +62,7 @@
       justify-content: space-between;
       padding: 12px 0 4px;
       .titleLeft {
-        @extend .title;
+        .title();
       }
       .titleRight {
         display: flex;

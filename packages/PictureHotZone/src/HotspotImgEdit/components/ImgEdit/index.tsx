@@ -134,12 +134,14 @@ function ImgEdit(props: __ImgEditProps) {
 
   const setContentRect = () => {
     let elem = document.querySelector('#content');
-    let rect = elem.getBoundingClientRect();
-    const { top, left } = rect;
-    setcontentWidth(rect.width);
-    setcontentHeight(rect.height);
-    setContentTop(top);
-    setcontentLeft(left);
+    let rect = elem?.getBoundingClientRect();
+    if (rect) {
+      const { top, left } = rect;
+      setcontentWidth(rect.width);
+      setcontentHeight(rect.height);
+      setContentTop(top);
+      setcontentLeft(left);
+    }
   };
 
   /**
