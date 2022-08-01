@@ -7,6 +7,8 @@
     "docs:build": "dumi build",
     "docs:deploy": "gh-pages -d docs-dist",
     "build": "father-build",
+    "release": "lerna publish --conventional-commits",
+    "release-no": "lerna publish --conventional-commits --no-verify-access",
     "deploy": "npm run docs:build && npm run docs:deploy",
     "prettier": "prettier --write \"**/*.{js,jsx,tsx,ts,less,md,json}\"",
     "test": "umi-test",
