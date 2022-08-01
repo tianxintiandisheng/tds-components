@@ -1,8 +1,12 @@
 import React from 'react';
 // import RelatedSimple from '@/components/RelatedSimple';
+import classnames from 'classnames';
 import { Popconfirm } from 'antd';
 import { __BoxItem } from '../../interface';
-import ss from './index.less';
+import './index.less';
+
+const prefixCls = 'tds-picture-hot-zone';
+const componentName = 'hot-spot-list';
 
 interface __HotspotListProps {
   /**
@@ -59,9 +63,9 @@ function HotspotList(props: __HotspotListProps) {
           <div
             key={item.uuid}
             onClick={() => setCurSelectItemUuid(item.uuid)}
-            className={item.uuid === curSelectItemUuid ? ss.itemContentCur : ss.itemContent}
+            className={item.uuid === curSelectItemUuid ? 'itemContentCur' : 'itemContent'}
           >
-            <div className={ss.itemContentLeft}>
+            <div className="itemContentLeft">
               <div>{`【${item.orderNum}】`}</div>
               {/* <RelatedSimple
                 value={item.link}
@@ -77,7 +81,7 @@ function HotspotList(props: __HotspotListProps) {
               okText="确认"
               cancelText="取消"
             >
-              <a className={ss.actionButton}>删除</a>
+              <a className="actionButton">删除</a>
             </Popconfirm>
           </div>
         );
@@ -87,9 +91,9 @@ function HotspotList(props: __HotspotListProps) {
   };
 
   return (
-    <div className={ss.root}>
-      <div className={ss.title}>
-        <div className={ss.titleLeft}>热区列表：</div>
+    <div className={classnames(`${prefixCls}-${componentName}`)}>
+      <div className="title">
+        <div className="titleLeft">热区列表：</div>
         <Popconfirm
           title="确认清空所有热区吗?"
           onConfirm={() => setBoxArray([])}
@@ -97,10 +101,10 @@ function HotspotList(props: __HotspotListProps) {
           okText="确认"
           cancelText="取消"
         >
-          <a className={ss.actionButton}>清空</a>
+          <a className="actionButton">清空</a>
         </Popconfirm>
       </div>
-      <div className={ss.content}>{renderList()}</div>
+      <div className="content">{renderList()}</div>
     </div>
   );
 }

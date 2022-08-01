@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Rnd } from 'react-rnd';
+import classnames from 'classnames';
 import { __BoxItem } from '../../interface';
-import ss from './index.less';
+import './index.less';
+
+const prefixCls = 'tds-picture-hot-zone';
+const componentName = 'rnd-item';
 
 /**
  * @function 将含有px的字符串转为数字
@@ -64,7 +68,10 @@ function RndItem(props: any) {
     setBoxArray([...newList]);
   }
   return (
-    <div className={ss.root} onClick={() => setCurSelectItemUuid(uuid)}>
+    <div
+      className={classnames(`${prefixCls}-${componentName}`)}
+      onClick={() => setCurSelectItemUuid(uuid)}
+    >
       <Rnd
         //  className={ss.root}
         onMouseEnter={handleMouseEnter}
@@ -94,7 +101,7 @@ function RndItem(props: any) {
         minWidth={20}
         minHeight={20}
       >
-        <div className={uuid === curSelectItemUuid ? ss.orderNumCur : ss.orderNum}>{orderNum}</div>
+        <div className={uuid === curSelectItemUuid ? 'orderNumCur' : 'orderNum'}>{orderNum}</div>
       </Rnd>
     </div>
   );

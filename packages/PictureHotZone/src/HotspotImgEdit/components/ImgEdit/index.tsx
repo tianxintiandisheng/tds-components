@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import classnames from 'classnames';
 import { __BoxItem } from '../../interface';
 import RndItem from '../RndItem';
-import ss from './index.less';
+import './index.less';
+
+const prefixCls = 'tds-picture-hot-zone';
+const componentName = 'img-edit';
 
 interface __ImgEditProps {
   /**
@@ -176,7 +180,7 @@ function ImgEdit(props: __ImgEditProps) {
           key={i.uuid}
           uuid={i.uuid}
           orderNum={i.orderNum}
-          className={ss.boxItem}
+          className="boxItem"
           setCanAdd={setCanAdd}
           setBoxArray={setBoxArray}
           boxArray={boxArray}
@@ -206,7 +210,7 @@ function ImgEdit(props: __ImgEditProps) {
   // }, [rect.width,rect.height,rect.top,rect.left]);
 
   return (
-    <div className={ss.root}>
+    <div className={classnames(`${prefixCls}-${componentName}`)}>
       <div
         id="content"
         // style={{ width:contentWidth, height:contentHeight }}
@@ -219,13 +223,10 @@ function ImgEdit(props: __ImgEditProps) {
       >
         {renderBoxArray()}
         {/* {renderBoxItem()} */}
-        <div
-          className={ss.boxEdit}
-          style={{ position: 'absolute', top: y, left: x, width, height }}
-        >
+        <div className="boxEdit" style={{ position: 'absolute', top: y, left: x, width, height }}>
           {/* cover */}
         </div>
-        <img className={ss.image} src={imgSrc}></img>
+        <img className="image" src={imgSrc}></img>
       </div>
     </div>
   );

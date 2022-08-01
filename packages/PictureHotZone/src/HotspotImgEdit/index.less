@@ -1,10 +1,16 @@
-.root {
+@prefixCls: 'tds-picture-hot-zone';
+@componentName: 'img-edit';
+@rootName: ~'@{prefixCls}-@{componentName}';
+
+.@{rootName} {
   .title {
     color: #262626;
     font-size: 14px;
   }
+
   .tipArea {
     padding: 0 16px;
+
     .title::before {
       margin-right: 2px;
       color: red;
@@ -12,11 +18,13 @@
       font-family: SimSun, sans-serif;
       content: '*';
     }
+
     .tip {
       color: #bfbfbf;
       font-size: 12px;
     }
   }
+
   .form {
     padding: 0 16px;
   }
@@ -24,16 +32,20 @@
   .upload {
     margin-top: 8px;
   }
+
   .imgBox {
     position: relative;
   }
+
   .img {
     width: 100%;
     // max-height: 70vh;
     height: auto;
   }
+
   .hotspotItem {
     background-color: rgba(248, 84, 29, 0.7);
+
     .orderNum {
       width: 20px;
       height: 20px;
@@ -43,32 +55,40 @@
       background-color: #f8541d;
     }
   }
+
   .modalContent {
     display: flex;
+
     .leftContent {
       width: 66.66%;
     }
+
     .rightContent {
       width: 33.33%;
     }
   }
+
   .preBox {
     display: block;
     padding: 0 16px;
     background-color: #fafafa;
+
     .titlePre {
       display: flex;
       align-items: center;
       justify-content: space-between;
       padding: 12px 0 4px;
+
       .titleLeft {
         .title();
       }
+
       .titleRight {
         display: flex;
         align-items: center;
         font-size: 12px;
         cursor: pointer;
+
         span {
           margin-left: 4px;
           color: #2f54eb;
@@ -84,6 +104,7 @@
   :global {
     .ant-form-item {
       margin-bottom: 16px;
+
       .ant-upload {
         margin: 0;
       }

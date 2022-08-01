@@ -3,10 +3,14 @@ import React, { useState, useEffect } from 'react';
 import { Modal, Popover } from 'antd';
 import { QuestionCircleOutlined } from '@ant-design/icons';
 // import Icon from '@/components/IconItem';
+import classnames from 'classnames';
 import { __BoxItem } from './interface';
 import ImgEdit from './components/ImgEdit';
 import HotspotList from './components/HotspotList';
-import ss from './index.less';
+import './index.less';
+
+const prefixCls = 'tds-picture-hot-zone';
+const componentName = 'img-edit';
 
 interface __Props {
   /**
@@ -89,7 +93,7 @@ function HotspotImgEdit(props: __Props) {
         return (
           <div
             key={i.uuid}
-            className={ss.hotspotItem}
+            className="hotspotItem"
             style={{
               position: 'absolute',
               top: i.y * 100 + '%',
@@ -98,7 +102,7 @@ function HotspotImgEdit(props: __Props) {
               height: i.height * 100 + '%',
             }}
           >
-            <div className={ss.orderNum}>{i.orderNum}</div>
+            <div className="orderNum">{i.orderNum}</div>
           </div>
         );
       });
@@ -123,22 +127,22 @@ function HotspotImgEdit(props: __Props) {
     );
   };
   return (
-    <div className={ss.root}>
-      <div className={ss.preBox}>
-        <div className={ss.titlePre}>
-          <div className={ss.titleLeft}>
+    <div className={classnames(`${prefixCls}-${componentName}`)}>
+      <div className="preBox">
+        <div className="titlePre">
+          <div className="titleLeft">
             <span style={{ color: '#262626' }}>热区编辑</span>
             <Popover placement="bottom" content={renderDes()}>
               <QuestionCircleOutlined style={{ margin: '0 2px', color: '#B4B4B4' }} />
             </Popover>
             <span>:</span>
           </div>
-          <div className={ss.titleRight} onClick={showModal}>
+          <div className="titleRight" onClick={showModal}>
             <span>编辑</span>
           </div>
         </div>
-        <div className={ss.imgBox}>
-          <img src={value} className={ss.img}></img>
+        <div className="imgBox">
+          <img src={value} className="img"></img>
           {renderPreviewHotspot(extraValue)}
         </div>
       </div>
@@ -151,8 +155,8 @@ function HotspotImgEdit(props: __Props) {
         onOk={handleOk}
         onCancel={handleCancel}
       >
-        <div className={ss.modalContent}>
-          <div className={ss.leftContent}>
+        <div className="modalContent">
+          <div className="leftContent">
             <ImgEdit
               imgSrc={value}
               boxArray={boxArray}
@@ -161,7 +165,7 @@ function HotspotImgEdit(props: __Props) {
               setCurSelectItemUuid={setCurSelectItemUuid}
             ></ImgEdit>
           </div>
-          <div className={ss.rightContent}>
+          <div className="rightContent">
             <HotspotList
               typeComp={typeComp}
               boxArray={boxArray}

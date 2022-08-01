@@ -1,8 +1,13 @@
-.root {
+@prefixCls: 'tds-picture-hot-zone';
+@componentName: 'img-edit';
+@rootName: ~'@{prefixCls}-@{componentName}';
+
+.@{rootName} {
   position: relative;
   height: 54vh;
   overflow-x: hidden;
   overflow-y: auto;
+
   .cover {
     position: absolute;
     top: 0;
@@ -12,13 +17,16 @@
     background-color: green;
     opacity: 0.4;
   }
+
   .image {
     width: 100%;
   }
+
   .boxItem {
     z-index: 2;
     border: 1px solid blue;
   }
+
   .boxEdit {
     color: red;
     border: 1px solid blue;
