@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.4](https://github.com/digital-expo-backstage-lowcode/multiport-builder-launcher/compare/picture-hot-zone@0.3.3...picture-hot-zone@0.3.4) (2022-08-02)
+
+### 🐛 Bug Fixes | Bug 修复
+
+- **hot:** 修复 lerna publish 401 报错 ([fd83716](https://github.com/digital-expo-backstage-lowcode/multiport-builder-launcher/commit/fd83716e9d11ea24b0abba7eef5875f6c68954ae))
+- **hot:** 修复 lerna publish 401 报错 ([bbeb5b9](https://github.com/digital-expo-backstage-lowcode/multiport-builder-launcher/commit/bbeb5b9e10ce4c641e850956da643049bce3ddd2))
+
 ## [0.3.3](https://github.com/digital-expo-backstage-lowcode/multiport-builder-launcher/compare/picture-hot-zone@0.3.2...picture-hot-zone@0.3.3) (2022-08-02)
 
 **Note:** Version bump only for package picture-hot-zone
