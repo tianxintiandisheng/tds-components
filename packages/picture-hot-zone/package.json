@@ -30,7 +30,7 @@
   "bugs": {
     "url": "https://github.com/tianxintiandisheng/tds-components/issues"
   },
-  "gitHead": "86d876708a1eb1dff71bbc515b33d22a86b3fd2d",
+  "gitHead": "c63d8bab7f916f573243ba9378c8321319e9af2b",
   "dependencies": {
     "antd": "^4.22.2",
     "classnames": "^2.3.1",
