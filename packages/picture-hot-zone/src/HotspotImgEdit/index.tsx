@@ -59,7 +59,7 @@ function HotspotImgEdit(props: __Props) {
     typeComp,
   } = props;
   const showModal = () => {
-    console.log('测试0.4.3'); //todo delete
+    console.log('测试0.4.4'); //todo delete
     setCurSelectItemUuid(0); // 重置当前选中
     setIsModalVisible(true);
   };
