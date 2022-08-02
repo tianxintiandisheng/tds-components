@@ -22,8 +22,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tianxintiandisheng/tds-components.git",
-    "directory": "packages/picture-hot-zone"
+    "url": "git+https://github.com/tianxintiandisheng/tds-components.git"
   },
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1"
