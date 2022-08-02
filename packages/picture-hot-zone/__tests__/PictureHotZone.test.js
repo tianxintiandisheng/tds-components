@@ -3,5 +3,5 @@
 const picturehotzone = require('..');
 
 describe('PictureHotZone', () => {
-    it('needs tests');
+  it('needs tests');
 });
