@@ -1,6 +1,6 @@
 {
   "name": "picture-hot-zone",
-  "version": "0.3.4",
+  "version": "0.4.1",
   "description": "图片热区生成",
   "keywords": [
     "图片热区",
@@ -22,7 +22,8 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tianxintiandisheng/tds-components.git"
+    "url": "git+https://github.com/tianxintiandisheng/tds-components.git",
+    "directory": "packages/picture-hot-zone"
   },
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1"
@@ -30,7 +31,7 @@
   "bugs": {
     "url": "https://github.com/tianxintiandisheng/tds-components/issues"
   },
-  "gitHead": "1f5dfabdc5b8b6572850a9d10bcb53b98c6290f3",
+  "gitHead": "37adb15a032aa074309a15763f63cc8d1ca9fd0d",
   "dependencies": {
     "antd": "^4.22.2",
     "classnames": "^2.3.1",
