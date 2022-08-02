@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.2](https://github.com/digital-expo-backstage-lowcode/multiport-builder-launcher/compare/picture-hot-zone@0.4.1...picture-hot-zone@0.4.2) (2022-08-02)
+
+### 🐛 Bug Fixes | Bug 修复
+
+- **root:** 恢复代码 ([b090ba6](https://github.com/digital-expo-backstage-lowcode/multiport-builder-launcher/commit/b090ba602f32677f8cdea4aac7eab875c688845d))
+
 ## [0.4.1](https://github.com/digital-expo-backstage-lowcode/multiport-builder-launcher/compare/picture-hot-zone@0.4.0...picture-hot-zone@0.4.1) (2022-08-02)
 
 ### 🐛 Bug Fixes | Bug 修复
