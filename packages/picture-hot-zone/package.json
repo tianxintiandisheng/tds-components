@@ -22,7 +22,8 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tianxintiandisheng/tds-components.git"
+    "url": "git+https://github.com/tianxintiandisheng/tds-components.git",
+    "directory": "packages/picture-hot-zone"
   },
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1"
@@ -30,7 +31,7 @@
   "bugs": {
     "url": "https://github.com/tianxintiandisheng/tds-components/issues"
   },
-  "gitHead": "1f5dfabdc5b8b6572850a9d10bcb53b98c6290f3",
+  "gitHead": "6c1d8f606370ca67a407a2f56685dea20949d022",
   "dependencies": {
     "antd": "^4.22.2",
     "classnames": "^2.3.1",
