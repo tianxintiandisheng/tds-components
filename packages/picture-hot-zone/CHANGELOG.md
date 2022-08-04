@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.0](https://github.com/digital-expo-backstage-lowcode/multiport-builder-launcher/compare/picture-hot-zone@0.4.12...picture-hot-zone@0.5.0) (2022-08-04)
+
+### ✨ Features | 新功能
+
+- **hot:** 导出热区组件 ([9ab91a2](https://github.com/digital-expo-backstage-lowcode/multiport-builder-launcher/commit/9ab91a2757f6abe1cd465d53f93f5fd4dd35448d))
+- **root:** 提供基本说明 ([2c25d39](https://github.com/digital-expo-backstage-lowcode/multiport-builder-launcher/commit/2c25d39e4ab96389e497a0c4fe90aa4719f61f25))
+
 ## [0.4.12](https://github.com/digital-expo-backstage-lowcode/multiport-builder-launcher/compare/picture-hot-zone@0.4.11...picture-hot-zone@0.4.12) (2022-08-02)
 
 **Note:** Version bump only for package picture-hot-zone
