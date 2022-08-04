@@ -1,11 +1,12 @@
 # `PictureHotZone`
 
-> TODO: description
+> TODO: 1.0 会上完整功能哦
 
 ## Usage
 
-```
-const picturehotzone = require('PictureHotZone');
+```jsx
+import React from 'react';
+import { HotspotImgEdit } from 'picture-hot-zone';
 
-// TODO: DEMONSTRATE API
+export default () => <HotspotImgEdit>Hello !</HotspotImgEdit>;
 ```
